@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 08, 2021 at 09:58 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.11
+-- Generation Time: Jan 31, 2023 at 07:33 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,14 +35,14 @@ CREATE TABLE `admin` (
   `lastname` varchar(50) NOT NULL,
   `photo` varchar(200) NOT NULL,
   `created_on` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `firstname`, `lastname`, `photo`, `created_on`) VALUES
-(1, 'beni', '$2y$10$n44qKkas1BkXO7DD3pgd6.IAfWJ//ExaYTCP7mTpSvhU28uBN8.AO', 'Joseph', 'Benipayo', 'profi.jpg', '2018-04-30');
+(1, 'beni', '$2y$10$n44qKkas1BkXO7DD3pgd6.IAfWJ//ExaYTCP7mTpSvhU28uBN8.AO', 'ADMIN ', 'Benipayo', 'profi.jpg', '2018-04-30');
 
 -- --------------------------------------------------------
 
@@ -58,19 +58,14 @@ CREATE TABLE `attendance` (
   `status` int(1) NOT NULL,
   `time_out` time NOT NULL,
   `num_hr` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `attendance`
 --
 
 INSERT INTO `attendance` (`id`, `employee_id`, `date`, `time_in`, `status`, `time_out`, `num_hr`) VALUES
-(100, 11, '2020-12-27', '17:42:14', 0, '00:00:00', 0),
-(101, 8, '2020-12-27', '18:01:40', 0, '00:00:00', 0),
-(102, 11, '2020-12-30', '01:40:11', 1, '00:00:00', 0),
-(103, 8, '2020-12-30', '05:10:51', 1, '00:00:00', 0),
-(104, 9, '2020-12-30', '05:10:54', 1, '00:00:00', 0),
-(106, 11, '2020-12-31', '15:20:59', 0, '15:21:24', 0);
+(107, 11, '2023-02-01', '01:34:19', 1, '01:34:41', 12.416666666667);
 
 -- --------------------------------------------------------
 
@@ -91,21 +86,14 @@ CREATE TABLE `employees` (
   `schedule_id` int(11) NOT NULL,
   `photo` varchar(200) NOT NULL,
   `created_on` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `employees`
 --
 
 INSERT INTO `employees` (`id`, `employee_id`, `firstname`, `lastname`, `address`, `birthdate`, `contact_info`, `gender`, `position_id`, `schedule_id`, `photo`, `created_on`) VALUES
-(5, 'JEB215370689', 'Nica ', 'Adlawan', 'Road 7 street Barangay Bagong Silangan Quezon City', '2000-06-20', '09354429253', 'Female', 1, 3, '', '2020-11-06'),
-(6, 'IUY965170238', 'Jayvee', 'Aldovino ', '1654 Bato-Bato St. Brgy. Commonwealth Quezon City', '1999-12-04', '09291112008', 'Male', 1, 3, '', '2020-11-06'),
-(7, 'NAT927814035', 'Aira', 'Alvarez', '203 Rosal St. Payatas A Quezon City.', '1999-11-04', '09484735275', 'Female', 1, 3, '', '2020-11-06'),
-(8, 'GWE247856301', 'Rafael', 'Ardiente ', '24 Paguio cmpd Sitio 1 Brgy Sta.Lucia Nova Quezon City', '2001-08-29', '09616031524', 'Male', 1, 3, '', '2020-11-06'),
-(9, 'SZL326941085', 'Jhomel', 'Balagan', '12-A Saint Vincent Brgy. Holy Spirit Quezon City', '2000-03-17', '09773962095', 'Male', 1, 3, '', '2020-11-06'),
-(10, 'LKM958204763', 'Honey Lea', 'Barcos', '266 Sto Domingo St Brgy Holy Spirit Quezon City', '2000-09-27', '09654078243', 'Female', 1, 3, '', '2020-11-06'),
-(11, 'CAS051867234', 'Joseph', 'Benipayo', '309 A Bato-Bato Street Barangay Commonwealth Quezon City', '2001-03-30', '09952659613', 'Male', 1, 3, '', '2020-11-06'),
-(12, 'PKJ812306974', 'Harold', 'Bonete', 'Purok 6 Unit 7 Lower Nawasa Brgy. Commonwealth Quezon City', '2000-08-09', '09260140179', 'Male', 1, 3, '', '2020-11-06');
+(11, 'CAS051867234', 'Joseph', 'Benipayo', '309 A Bato-Bato Street Barangay Commonwealth Quezon City', '2001-03-30', '09952659613', 'Male', 1, 3, 'dp.jpg', '2023-02-01');
 
 -- --------------------------------------------------------
 
@@ -115,16 +103,15 @@ INSERT INTO `employees` (`id`, `employee_id`, `firstname`, `lastname`, `address`
 
 CREATE TABLE `position` (
   `id` int(11) NOT NULL,
-  `description` varchar(150) NOT NULL,
-  `rate` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `description` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `position`
 --
 
-INSERT INTO `position` (`id`, `description`, `rate`) VALUES
-(1, 'BAIT-2F', 100);
+INSERT INTO `position` (`id`, `description`) VALUES
+(1, 'FACULTY');
 
 -- --------------------------------------------------------
 
@@ -136,7 +123,7 @@ CREATE TABLE `schedules` (
   `id` int(11) NOT NULL,
   `time_in` time NOT NULL,
   `time_out` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `schedules`
@@ -194,7 +181,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `attendance`
 --
 ALTER TABLE `attendance`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
 
 --
 -- AUTO_INCREMENT for table `employees`
