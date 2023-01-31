@@ -13,7 +13,7 @@
 		$query = $conn->query($sql);
 
 		if($query->num_rows < 1){
-			$_SESSION['error'] = 'Employee not found';
+			$_SESSION['error'] = 'QR Code not found';
 		}
 		else{
 			$row = $query->fetch_assoc();
@@ -23,7 +23,7 @@
 			$query = $conn->query($sql);
 
 			if($query->num_rows > 0){
-				$_SESSION['error'] = 'Employee attendance for the day exist';
+				$_SESSION['error'] = 'Faculty attendance for the day exist';
 			}
 			else{
 				//updates
