@@ -53,7 +53,7 @@
                 <thead>
                   <th class="hidden"></th>
                   <th>Date</th>
-                  <th>Access ID</th>
+                  <th>QR Code</th>
                   <th>Name</th>
                   <th>Time In</th>
                   <th>Time Out</th>

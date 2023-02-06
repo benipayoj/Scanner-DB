@@ -21,13 +21,13 @@
         <li class="treeview">
           <a href="#">
             <i class="fa fa-users"></i>
-            <span>List of Students</span>
+            <span>List of Faculty</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="employee.php"><i class="fa fa-circle-o"></i> Students List</a></li>
+            <li><a href="employee.php"><i class="fa fa-circle-o"></i> Faculty List</a></li>
             <li><a href="schedule.php"><i class="fa fa-circle-o"></i> Schedules</a></li>
           </ul>
     </section>

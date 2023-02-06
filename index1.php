@@ -29,7 +29,7 @@
     
     <div class="login-title">
        
-      <h3>QUEZON CITY UNIVERSITY FACULTY ATTENDANCE MONITORING SYSTEM</h3>
+      <h3>COMPUTER BASED FACULTY MONITORING SYSTEM FOR QUEZON CITY UNIVERSITY</h3>
     </div>
 
 <video id="preview"></video>
