@@ -64,7 +64,7 @@
                 echo "<h3>".$query->num_rows."</h3>";
               ?>
 
-              <p>Total Faculty</p>
+              <p>Total Students</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-stalker"></i>
