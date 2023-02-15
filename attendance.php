@@ -35,7 +35,7 @@
 					//
 					$sql = "INSERT INTO attendance (employee_id, date, time_in, status) VALUES ('$id', '$date_now', NOW(), '$logstatus')";
 					if($conn->query($sql)){
-						$output['message'] = 'Time in: '.$row['firstname'].' '.$row['lastname'];
+						$output['message'] = 'Time in: '.$row['firstname'].' '.$row['lastname'].' '.'"Please take a screenshot"';
 					}
 					else{
 						$output['error'] = true;

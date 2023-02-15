@@ -11,12 +11,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        List of Faculty
+        List of students
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li>Faculty</li>
-        <li class="active">Faculty List</li>
+        <li>Students</li>
+        <li class="active">Students List</li>
       </ol>
     </section>
     <!-- Main content -->
@@ -52,10 +52,10 @@
             <div class="box-body">
               <table id="example1" class="table table-bordered">
                 <thead>
-                  <th>QR Code</th>
+                  <th>Access ID</th>
                   <th>Photo</th>
                   <th>Name</th>
-                  <th>Position</th>
+                  <th>Section</th>
                   <th>Schedule</th>
                   <th>Member Since</th>
                   <th>Tools</th>
